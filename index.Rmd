@@ -7,8 +7,10 @@ output:
     self_contained: false
 ---
 
-
-
 ## Project thoughts
 
 I am interested in exploring data relating to climate change. I have a few more specific ideas within this realm. I would be interested in exploring the mental health affects of climate change among Gen Z (people born between 1996 and 2010). I would also be interested in exploring the relationship between gender or religion/spirituality on relationships to the environment/beliefs about climate change. 
+
+## Milestone 1: Proposal 
+
+Are religious American's more concerned with the environment than Americans who are non religiously affiliated? In this study, I plan to examine the extent to which American people's religious affiliation determines their relationships to the environment, specifically a belief in human-induced climate change. I hypothesize that religious Americans are, on average, less likely to believe in human-induced climate change. My explanatory variable of interest is whether or not Americans adhere to an organized religion. My outcome variable of interest for this study is whether or not Americans believe in human-induced climate change. A negative relationship between religious correlation and belief in human-induced climate change would indicate support for my hypothesis. On the other hand, if I observed that, on average, religious affiliation correlated with greater belief in human-induced climate change, this would disprove my hypothesis. 
