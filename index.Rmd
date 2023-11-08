@@ -16,3 +16,37 @@ I am interested in exploring data relating to climate change. I have a few more 
 Are religious American's more concerned with the environment than Americans who are non religiously affiliated? In this study, I plan to examine the extent to which American people's religious affiliation determines their relationships to the environment, specifically a belief in human-induced climate change. I am using data from Pew Research Center, 2022, "How Religion Intersects With American's Views on the Environment." The report surveyed 10,156 U.S. adults from April 11-17, 2022. All respondents to the survey are part of Pew Research Center’s American Trends Panel (ATP), an online survey panel that is recruited through national random sampling of residential addresses.
 
 I hypothesize that religious Americans are, on average, less likely to believe in human-induced climate change. My explanatory variable of interest is whether or not Americans adhere to an organized religion. My outcome variable of interest for this study is whether or not Americans believe in human-induced climate change. A negative relationship between religious correlation and belief in human-induced climate change would indicate support for my hypothesis. On the other hand, if I observed that, on average, religious affiliation correlated with greater belief in human-induced climate change, this would disprove my hypothesis. 
+
+```{r}
+library(haven)
+library(readr)
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+
+df_sav <- read_sav("ATP W106.sav")
+getwd() # this is the folder it will save into unless you specify otherwise in the path below
+write_csv(x=df_sav, path="df.csv")
+
+df <- read_csv("df.csv")
+```
+
+
+```{r}
+
+df |>
+  ggplot(aes(x = "RELPER", y = "CLMSRS2")) +
+  geom_point() +
+  labs(title = "Relationship between RELPER and CLMSRS2",
+       x = "Religious person?",
+       y = "Climate change as a serious problem")
+
+df |>
+  ggplot(aes(x = "SPIRPER", y = "CLMSRS2")) +
+  geom_point() +
+  labs(title = "Relationship between SPIRPER and CLMSRS2",
+       x = "Spiritual person?",
+       y = "Climate change as a serious problem")
+
+```
+
