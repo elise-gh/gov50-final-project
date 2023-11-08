@@ -11,7 +11,7 @@ output:
 
 I am interested in exploring data relating to climate change. I have a few more specific ideas within this realm. I would be interested in exploring the mental health affects of climate change among Gen Z (people born between 1996 and 2010). I would also be interested in exploring the relationship between gender or religion/spirituality on relationships to the environment/beliefs about climate change. 
 
-## Milestone 1: Proposal 
+## Milestone 2: Proposal 
 
 Are religious American's more concerned with the environment than Americans who are non religiously affiliated? In this study, I plan to examine the extent to which American people's religious affiliation determines their relationships to the environment, specifically a belief in human-induced climate change. I am using data from Pew Research Center, 2022, "How Religion Intersects With American's Views on the Environment." The report surveyed 10,156 U.S. adults from April 11-17, 2022. All respondents to the survey are part of Pew Research Center’s American Trends Panel (ATP), an online survey panel that is recruited through national random sampling of residential addresses.
 
