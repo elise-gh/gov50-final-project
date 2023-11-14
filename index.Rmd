@@ -23,6 +23,7 @@ library(readr)
 library(ggplot2)
 library(dplyr)
 library(tidyverse)
+library(modelsummary)
 
 df_sav <- read_sav("ATP W106.sav")
 getwd() # this is the folder it will save into unless you specify otherwise in the path below
@@ -48,5 +49,41 @@ df |>
        x = "Spiritual person?",
        y = "Climate change as a serious problem")
 
-```
+
+# Regression table
+
+regression1 <- lm(`CLMSRS2_a_W106`~`RELPER_W106`, data= df)
+summarized_regression1 <- summary(regression1)
+
+regression2 <- lm(`CLMSRS2_a_W106`~`RELPER_W106`+`F_PARTY_FINAL`, data= df)
+summarized_regression2 <- summary(regression2)
+
+modelsummary(list(regression1,
+             regression2))
+
+summarized_regression1$coefficients
+summarized_regression2$coefficients
+
+# Creating plot of point estimate and CI
+
+estimates_to_plot <- data.frame(matrix(ncol = 2, nrow = 2))
+names(estimates_to_plot) <- c("estimate", "se")
+
+estimates_to_plot$model <- c(1,2)
+
+estimates_to_plot$estimate[1] <- summarized_regression1$coefficients[2,1]
+estimates_to_plot$estimate[2] <- summarized_regression2$coefficients[2,1]
+
+estimates_to_plot$se[1] <- summarized_regression1$coefficients[2,2]
+estimates_to_plot$se[2] <- summarized_regression2$coefficients[2,2]
+
+estimates_to_plot <- estimates_to_plot |>
+  mutate(
+    ub = estimate+qnorm(0.975)*se,
+    lb = estimate-qnorm(0.975)*se
+  )
+
+estimates_to_plot |> ggplot(aes(x = model, y = estimate)) +
+  geom_point() + geom_errorbar(aes(ymin = lb, ymax = ub, width = 0.05))
+``` 
 
