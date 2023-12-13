@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["ATP W106.sav","df.csv","from_sav_data.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/figure-html5/unnamed-chunk-2-2.png","index_files/figure-html5/unnamed-chunk-2-3.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.25/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/kePrint-0.0.1/kePrint.js","index_files/lightable-0.0.1/lightable.css","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["ATP W106.sav","df.csv","from_sav_data.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/figure-html5/unnamed-chunk-2-2.png","index_files/figure-html5/unnamed-chunk-2-3.png","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.25/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/kePrint-0.0.1/kePrint.js","index_files/lightable-0.0.1/lightable.css","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1545,33 +1545,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"RELPER"</span>, y <span class='op'>=</span> <span class='st'>"CLMSRS2"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Relationship between RELPER and CLMSRS2"</span>,</span>
-<span>       x <span class='op'>=</span> <span class='st'>"Religious person?"</span>,</span>
-<span>       y <span class='op'>=</span> <span class='st'>"Climate change as a serious problem"</span><span class='op'>)</span></span></code></pre>
-</div>
-<img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" />
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"SPIRPER"</span>, y <span class='op'>=</span> <span class='st'>"CLMSRS2"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Relationship between SPIRPER and CLMSRS2"</span>,</span>
-<span>       x <span class='op'>=</span> <span class='st'>"Spiritual person?"</span>,</span>
-<span>       y <span class='op'>=</span> <span class='st'>"Climate change as a serious problem"</span><span class='op'>)</span></span></code></pre>
-</div>
-<img src="index_files/figure-html5/unnamed-chunk-2-2.png" width="624" />
-<div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Regression table</span></span>
 <span></span>
-<span><span class='va'>regression1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>`CLMSRS2_a_W106`</span><span class='op'>~</span><span class='va'>`RELPER_W106`</span>, data<span class='op'>=</span> <span class='va'>df</span><span class='op'>)</span></span>
+<span><span class='va'>regression1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>`CLMSRS1_W106`</span><span class='op'>~</span><span class='va'>`RELPER_W106`</span>, data<span class='op'>=</span> <span class='va'>df</span><span class='op'>)</span></span>
 <span><span class='va'>summarized_regression1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>regression1</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>regression2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>`CLMSRS2_a_W106`</span><span class='op'>~</span><span class='va'>`RELPER_W106`</span><span class='op'>+</span><span class='va'>`F_PARTY_FINAL`</span>, data<span class='op'>=</span> <span class='va'>df</span><span class='op'>)</span></span>
+<span><span class='va'>regression2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>`CLMSRS1_W106`</span><span class='op'>~</span><span class='va'>`RELPER_W106`</span><span class='op'>+</span><span class='va'>`F_PARTY_FINAL`</span>, data<span class='op'>=</span> <span class='va'>df</span><span class='op'>)</span></span>
 <span><span class='va'>summarized_regression2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>regression2</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='fu'><a href='https://modelsummary.com/reference/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>regression1</span>,</span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>regression1</span>,</span>
 <span>             <span class='va'>regression2</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
@@ -1593,20 +1575,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 (Intercept)
 </td>
 <td style="text-align:center;">
-4.077
+2.493
 </td>
 <td style="text-align:center;">
-4.106
+2.413
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 </td>
 <td style="text-align:center;">
-(0.260)
+(0.045)
 </td>
 <td style="text-align:center;">
-(0.277)
+(0.047)
 </td>
 </tr>
 <tr>
@@ -1614,20 +1596,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 RELPER_W106
 </td>
 <td style="text-align:center;">
-0.122
+0.036
 </td>
 <td style="text-align:center;">
-0.123
+0.033
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 </td>
 <td style="text-align:center;">
-(0.033)
+(0.006)
 </td>
 <td style="text-align:center;">
-(0.033)
+(0.006)
 </td>
 </tr>
 <tr>
@@ -1637,7 +1619,7 @@ F_PARTY_FINAL
 <td style="text-align:center;">
 </td>
 <td style="text-align:center;">
-−0.016
+0.029
 </td>
 </tr>
 <tr>
@@ -1646,7 +1628,7 @@ F_PARTY_FINAL
 <td style="text-align:center;box-shadow: 0px 1.5px">
 </td>
 <td style="text-align:center;box-shadow: 0px 1.5px">
-(0.054)
+(0.004)
 </td>
 </tr>
 <tr>
@@ -1654,10 +1636,10 @@ F_PARTY_FINAL
 Num.Obs.
 </td>
 <td style="text-align:center;">
-2373
+10156
 </td>
 <td style="text-align:center;">
-2373
+10156
 </td>
 </tr>
 <tr>
@@ -1665,10 +1647,10 @@ Num.Obs.
 R2
 </td>
 <td style="text-align:center;">
-0.006
+0.003
 </td>
 <td style="text-align:center;">
-0.006
+0.008
 </td>
 </tr>
 <tr>
@@ -1676,10 +1658,10 @@ R2
 R2 Adj.
 </td>
 <td style="text-align:center;">
-0.005
+0.003
 </td>
 <td style="text-align:center;">
-0.005
+0.008
 </td>
 </tr>
 <tr>
@@ -1687,10 +1669,10 @@ R2 Adj.
 AIC
 </td>
 <td style="text-align:center;">
-18510.6
+57753.1
 </td>
 <td style="text-align:center;">
-18512.5
+57709.3
 </td>
 </tr>
 <tr>
@@ -1698,10 +1680,10 @@ AIC
 BIC
 </td>
 <td style="text-align:center;">
-18527.9
+57774.8
 </td>
 <td style="text-align:center;">
-18535.6
+57738.2
 </td>
 </tr>
 <tr>
@@ -1709,10 +1691,10 @@ BIC
 Log.Lik.
 </td>
 <td style="text-align:center;">
-−9252.306
+−28873.545
 </td>
 <td style="text-align:center;">
-−9252.261
+−28850.640
 </td>
 </tr>
 <tr>
@@ -1720,10 +1702,10 @@ Log.Lik.
 RMSE
 </td>
 <td style="text-align:center;">
-11.94
+4.15
 </td>
 <td style="text-align:center;">
-11.94
+4.14
 </td>
 </tr>
 </tbody>
@@ -1731,16 +1713,16 @@ RMSE
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>summarized_regression1</span><span class='op'>$</span><span class='va'>coefficients</span></span></code></pre>
 </div>
-<pre><code>             Estimate Std. Error   t value     Pr(&gt;|t|)
-(Intercept) 4.0773545 0.25999062 15.682698 8.158771e-53
-RELPER_W106 0.1222905 0.03276188  3.732707 1.938894e-04</code></pre>
+<pre><code>             Estimate  Std. Error   t value     Pr(&gt;|t|)
+(Intercept) 2.4930973 0.045186311 55.173729 0.000000e+00
+RELPER_W106 0.0363076 0.006346758  5.720653 1.091179e-08</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>summarized_regression2</span><span class='op'>$</span><span class='va'>coefficients</span></span></code></pre>
 </div>
-<pre><code>                 Estimate Std. Error    t value     Pr(&gt;|t|)
-(Intercept)    4.10595226 0.27720980 14.8117137 1.538059e-47
-RELPER_W106    0.12334245 0.03295807  3.7424047 1.865999e-04
-F_PARTY_FINAL -0.01601169 0.05377350 -0.2977618 7.659111e-01</code></pre>
+<pre><code>                Estimate  Std. Error   t value     Pr(&gt;|t|)
+(Intercept)   2.41317882 0.046604287 51.780190 0.000000e+00
+RELPER_W106   0.03285868 0.006353199  5.171990 2.360299e-07
+F_PARTY_FINAL 0.02922872 0.004314180  6.775036 1.312708e-11</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Creating plot of point estimate and CI</span></span>
 <span></span>
@@ -1764,9 +1746,262 @@ F_PARTY_FINAL -0.01601169 0.05377350 -0.2977618 7.659111e-01</code></pre>
 <span><span class='va'>estimates_to_plot</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>model</span>, y <span class='op'>=</span> <span class='va'>estimate</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_linerange.html'>geom_errorbar</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>ymin <span class='op'>=</span> <span class='va'>lb</span>, ymax <span class='op'>=</span> <span class='va'>ub</span>, width <span class='op'>=</span> <span class='fl'>0.05</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-2-3.png" width="624" /></p>
+<p><img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
 </div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>##Final Report</p>
+<h2 id="introduction">Introduction</h2>
+<p>In this final project, I assess the following question: Does religiosity affect American’s views of climate change? In this study, I examine the extent to which American people’s religious affiliation determines their relationships to the environment, specifically how serious of a problem they believe climate change to be. I hypothesize that Americans who identify as religious are, on average, less likely to see global climate change as a serious problem than their American non- religious counterparts. This research is interesting because the intersection of religious beliefs and environmental attitudes is reflective of complex social and cultural dynamics and it is necessary to scrutinize these dynamics in order to develop successful policies and address an important global issue.</p>
+<h2 id="data-section">Data section</h2>
+<p>I am using data from Pew Research Center, 2022, “How Religion Intersects With American’s Views on the Environment.” The report surveyed 10,156 U.S. adults from April 11-17, 2022. All respondents to the survey are part of Pew Research Center’s American Trends Panel (ATP), an online survey panel that is recruited through national random sampling of residential addresses. My explanatory variable of interest (‘RELPER’) is to what extent Americans identify as being religious. My outcome variable of interest for this study (‘CLMSRS1_W106’) reflects to what extent Americans believe that global climate change is a serious issue. Both of these variables are measured by means of a survey. A negative relationship between religious correlation and belief in global climate change as a serious issue would indicate support for my hypothesis. On the other hand, if I observed that, on average, religious affiliation correlated with greater belief in global climate change as a serious issue, this would disprove my hypothesis.</p>
+<p>##Plot of dependent variable</p>
+<h1 id="regression-table">Regression table</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>regression1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>`CLMSRS1_W106`</span><span class='op'>~</span><span class='va'>`RELPER_W106`</span>, data<span class='op'>=</span> <span class='va'>df</span><span class='op'>)</span></span>
+<span><span class='va'>summarized_regression1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>regression1</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>summarized_regression1</span><span class='op'>$</span><span class='va'>coefficients</span></span></code></pre>
+</div>
+<pre><code>             Estimate  Std. Error   t value     Pr(&gt;|t|)
+(Intercept) 2.4930973 0.045186311 55.173729 0.000000e+00
+RELPER_W106 0.0363076 0.006346758  5.720653 1.091179e-08</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>estimates_to_plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>ncol <span class='op'>=</span> <span class='fl'>2</span>, nrow <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>estimates_to_plot</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"estimate"</span>, <span class='st'>"se"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>estimates_to_plot</span><span class='op'>$</span><span class='va'>model</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>estimates_to_plot</span><span class='op'>$</span><span class='va'>estimate</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>summarized_regression1</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>]</span></span>
+<span></span>
+<span><span class='va'>estimates_to_plot</span><span class='op'>$</span><span class='va'>se</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>summarized_regression1</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>]</span></span>
+<span></span>
+<span><span class='va'>estimates_to_plot</span> <span class='op'>&lt;-</span> <span class='va'>estimates_to_plot</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    ub <span class='op'>=</span> <span class='va'>estimate</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>qnorm</a></span><span class='op'>(</span><span class='fl'>0.975</span><span class='op'>)</span><span class='op'>*</span><span class='va'>se</span>,</span>
+<span>    lb <span class='op'>=</span> <span class='va'>estimate</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>qnorm</a></span><span class='op'>(</span><span class='fl'>0.975</span><span class='op'>)</span><span class='op'>*</span><span class='va'>se</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<h2 id="results">Results</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Regression table</span></span>
+<span></span>
+<span><span class='va'>regression1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>`CLMSRS1_W106`</span><span class='op'>~</span><span class='va'>`RELPER_W106`</span>, data<span class='op'>=</span> <span class='va'>df</span><span class='op'>)</span></span>
+<span><span class='va'>summarized_regression1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>regression1</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>regression2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>`CLMSRS1_W106`</span><span class='op'>~</span><span class='va'>`RELPER_W106`</span><span class='op'>+</span><span class='va'>`F_PARTY_FINAL`</span>, data<span class='op'>=</span> <span class='va'>df</span><span class='op'>)</span></span>
+<span><span class='va'>summarized_regression2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>regression2</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>regression1</span>,</span>
+<span>             <span class='va'>regression2</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+ (1)
+</th>
+<th style="text-align:center;">
+  (2)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+2.493
+</td>
+<td style="text-align:center;">
+2.413
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+(0.045)
+</td>
+<td style="text-align:center;">
+(0.047)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RELPER_W106
+</td>
+<td style="text-align:center;">
+0.036
+</td>
+<td style="text-align:center;">
+0.033
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+(0.006)
+</td>
+<td style="text-align:center;">
+(0.006)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+F_PARTY_FINAL
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+0.029
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1.5px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1.5px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1.5px">
+(0.004)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+10156
+</td>
+<td style="text-align:center;">
+10156
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.003
+</td>
+<td style="text-align:center;">
+0.008
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+0.003
+</td>
+<td style="text-align:center;">
+0.008
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AIC
+</td>
+<td style="text-align:center;">
+57753.1
+</td>
+<td style="text-align:center;">
+57709.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BIC
+</td>
+<td style="text-align:center;">
+57774.8
+</td>
+<td style="text-align:center;">
+57738.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Log.Lik.
+</td>
+<td style="text-align:center;">
+−28873.545
+</td>
+<td style="text-align:center;">
+−28850.640
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMSE
+</td>
+<td style="text-align:center;">
+4.15
+</td>
+<td style="text-align:center;">
+4.14
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>summarized_regression1</span><span class='op'>$</span><span class='va'>coefficients</span></span></code></pre>
+</div>
+<pre><code>             Estimate  Std. Error   t value     Pr(&gt;|t|)
+(Intercept) 2.4930973 0.045186311 55.173729 0.000000e+00
+RELPER_W106 0.0363076 0.006346758  5.720653 1.091179e-08</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>summarized_regression2</span><span class='op'>$</span><span class='va'>coefficients</span></span></code></pre>
+</div>
+<pre><code>                Estimate  Std. Error   t value     Pr(&gt;|t|)
+(Intercept)   2.41317882 0.046604287 51.780190 0.000000e+00
+RELPER_W106   0.03285868 0.006353199  5.171990 2.360299e-07
+F_PARTY_FINAL 0.02922872 0.004314180  6.775036 1.312708e-11</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Creating plot of point estimate and CI</span></span>
+<span></span>
+<span><span class='va'>estimates_to_plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>ncol <span class='op'>=</span> <span class='fl'>2</span>, nrow <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>estimates_to_plot</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"estimate"</span>, <span class='st'>"se"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>estimates_to_plot</span><span class='op'>$</span><span class='va'>model</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>estimates_to_plot</span><span class='op'>$</span><span class='va'>estimate</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>summarized_regression1</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>]</span></span>
+<span><span class='va'>estimates_to_plot</span><span class='op'>$</span><span class='va'>estimate</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>summarized_regression2</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>]</span></span>
+<span></span>
+<span><span class='va'>estimates_to_plot</span><span class='op'>$</span><span class='va'>se</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>summarized_regression1</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>]</span></span>
+<span><span class='va'>estimates_to_plot</span><span class='op'>$</span><span class='va'>se</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>summarized_regression2</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>]</span></span>
+<span></span>
+<span><span class='va'>estimates_to_plot</span> <span class='op'>&lt;-</span> <span class='va'>estimates_to_plot</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    ub <span class='op'>=</span> <span class='va'>estimate</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>qnorm</a></span><span class='op'>(</span><span class='fl'>0.975</span><span class='op'>)</span><span class='op'>*</span><span class='va'>se</span>,</span>
+<span>    lb <span class='op'>=</span> <span class='va'>estimate</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>qnorm</a></span><span class='op'>(</span><span class='fl'>0.975</span><span class='op'>)</span><span class='op'>*</span><span class='va'>se</span></span>
+<span>  <span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>estimates_to_plot</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>model</span>, y <span class='op'>=</span> <span class='va'>estimate</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_linerange.html'>geom_errorbar</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>ymin <span class='op'>=</span> <span class='va'>lb</span>, ymax <span class='op'>=</span> <span class='va'>ub</span>, width <span class='op'>=</span> <span class='fl'>0.05</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Relationship Between Religiosity and Views on Climate Change"</span>,</span>
+<span>       x <span class='op'>=</span> <span class='st'>"Model"</span>,</span>
+<span>       y <span class='op'>=</span> <span class='st'>"Coefficient Estimate"</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
+</div>
+<p>##Interpretation of plots and regression</p>
+<p>In the above code, I have conducted two linear regressions to assess the relationship between respondents’ religious affiliation (RELPER_W106) and their views on climate change (CLMSRS1_W106). The second regression also includes political party affiliation (F_PARTY_FINAL) as a control variable.</p>
+<p>For regression 1:</p>
+<p>The coefficient for RELPER_W106 represents the estimated change in the dependent variable (CLMSRS1_W106) associated with a one-unit change in the religious affiliation variable (which is a range from “not at all religious” to “very religious”. Given a coefficient of 0.0363076 RELPER_W106, this means that a one-unit increase in religious affiliation is associated with an increase of 0.0363076 units in the perceived seriousness of climate change.</p>
+<p>For regression 2:</p>
+<p>The coefficient for RELPER_W106 now represents the estimated change in CLMSRS1_W106 associated with a one-unit change in religious affiliation, holding political party affiliation constant. Given that the coefficient for RELPER remained relatively constant at 0.03286 and the coefficient for F_PARTY_FINAL is 0.02923, this implies that the relationship between religiosity and views on climate change established in the first regression remains stable even when considering political party affiliation.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The results of my plot/regression do not support my hypothesis. Both regression models indicate positive, although very slight, associations between religious affiliation and the perceived seriousness of climate change. These findings suggest that, on average, Americans who identify as religious are more likely to view global climate change as a serious problem, contrary to my hypothesis.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

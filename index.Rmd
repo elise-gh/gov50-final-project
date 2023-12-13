@@ -35,27 +35,13 @@ df <- read_csv("df.csv")
 
 ```{r}
 
-df |>
-  ggplot(aes(x = "RELPER", y = "CLMSRS2")) +
-  geom_point() +
-  labs(title = "Relationship between RELPER and CLMSRS2",
-       x = "Religious person?",
-       y = "Climate change as a serious problem")
-
-df |>
-  ggplot(aes(x = "SPIRPER", y = "CLMSRS2")) +
-  geom_point() +
-  labs(title = "Relationship between SPIRPER and CLMSRS2",
-       x = "Spiritual person?",
-       y = "Climate change as a serious problem")
-
 
 # Regression table
 
-regression1 <- lm(`CLMSRS2_a_W106`~`RELPER_W106`, data= df)
+regression1 <- lm(`CLMSRS1_W106`~`RELPER_W106`, data= df)
 summarized_regression1 <- summary(regression1)
 
-regression2 <- lm(`CLMSRS2_a_W106`~`RELPER_W106`+`F_PARTY_FINAL`, data= df)
+regression2 <- lm(`CLMSRS1_W106`~`RELPER_W106`+`F_PARTY_FINAL`, data= df)
 summarized_regression2 <- summary(regression2)
 
 modelsummary(list(regression1,
@@ -86,4 +72,108 @@ estimates_to_plot <- estimates_to_plot |>
 estimates_to_plot |> ggplot(aes(x = model, y = estimate)) +
   geom_point() + geom_errorbar(aes(ymin = lb, ymax = ub, width = 0.05))
 ``` 
+
+##Final Report 
+
+## Introduction 
+
+In this final project, I assess the following question: Does religiosity affect American's views of climate change? In this study, I examine the extent to which American people's religious affiliation determines their relationships to the environment, specifically how serious of a problem they believe climate change to be. I hypothesize that Americans who identify as religious are, on average, less likely to see global climate change as a serious problem than their American non- religious counterparts. This research is interesting because the intersection of religious beliefs and environmental attitudes is reflective of complex social and cultural dynamics and it is necessary to scrutinize these dynamics in order to develop successful policies and address an important global issue. 
+
+## Data section
+
+I am using data from Pew Research Center, 2022, "How Religion Intersects With American's Views on the Environment." The report surveyed 10,156 U.S. adults from April 11-17, 2022. All respondents to the survey are part of Pew Research Center’s American Trends Panel (ATP), an online survey panel that is recruited through national random sampling of residential addresses. My explanatory variable of interest ('RELPER') is to what extent Americans identify as being religious. My outcome variable of interest for this study ('CLMSRS1_W106') reflects to what extent Americans believe that global climate change is a serious issue. Both of these variables are measured by means of a survey. A negative relationship between religious correlation and belief in global climate change as a serious issue would indicate support for my hypothesis. On the other hand, if I observed that, on average, religious affiliation correlated with greater belief in global climate change as a serious issue, this would disprove my hypothesis. 
+
+##Plot of dependent variable
+
+# Regression table
+
+```{r}
+regression1 <- lm(`CLMSRS1_W106`~`RELPER_W106`, data= df)
+summarized_regression1 <- summary(regression1)
+
+summarized_regression1$coefficients
+
+estimates_to_plot <- data.frame(matrix(ncol = 2, nrow = 2))
+names(estimates_to_plot) <- c("estimate", "se")
+
+estimates_to_plot$model <- c(1,2)
+
+estimates_to_plot$estimate[1] <- summarized_regression1$coefficients[2,1]
+
+estimates_to_plot$se[1] <- summarized_regression1$coefficients[2,2]
+
+estimates_to_plot <- estimates_to_plot |>
+  mutate(
+    ub = estimate+qnorm(0.975)*se,
+    lb = estimate-qnorm(0.975)*se
+  )
+
+```
+
+## Results 
+
+```{r}
+
+library(ggplot2)
+
+# Regression table
+
+regression1 <- lm(`CLMSRS1_W106`~`RELPER_W106`, data= df)
+summarized_regression1 <- summary(regression1)
+
+regression2 <- lm(`CLMSRS1_W106`~`RELPER_W106`+`F_PARTY_FINAL`, data= df)
+summarized_regression2 <- summary(regression2)
+
+modelsummary(list(regression1,
+             regression2))
+
+summarized_regression1$coefficients
+summarized_regression2$coefficients
+
+# Creating plot of point estimate and CI
+
+estimates_to_plot <- data.frame(matrix(ncol = 2, nrow = 2))
+names(estimates_to_plot) <- c("estimate", "se")
+
+estimates_to_plot$model <- c(1,2)
+
+estimates_to_plot$estimate[1] <- summarized_regression1$coefficients[2,1]
+estimates_to_plot$estimate[2] <- summarized_regression2$coefficients[2,1]
+
+estimates_to_plot$se[1] <- summarized_regression1$coefficients[2,2]
+estimates_to_plot$se[2] <- summarized_regression2$coefficients[2,2]
+
+estimates_to_plot <- estimates_to_plot |>
+  mutate(
+    ub = estimate+qnorm(0.975)*se,
+    lb = estimate-qnorm(0.975)*se
+  )
+
+estimates_to_plot |> ggplot(aes(x = model, y = estimate)) +
+  geom_point() + geom_errorbar(aes(ymin = lb, ymax = ub, width = 0.05)) +
+  labs(title = "Relationship Between Religiosity and Views on Climate Change",
+       x = "Model",
+       y = "Coefficient Estimate")
+
+```
+
+##Interpretation of plots and regression 
+
+In the above code, I have conducted two linear regressions to assess the relationship between respondents' religious affiliation (RELPER_W106) and their views on climate change (CLMSRS1_W106). The second regression also includes political party affiliation (F_PARTY_FINAL) as a control variable.
+
+For regression 1:
+
+The coefficient for RELPER_W106 represents the estimated change in the dependent variable (CLMSRS1_W106) associated with a one-unit change in the religious affiliation variable (which is a range from "not at all religious" to "very religious". Given a coefficient of 0.0363076 RELPER_W106, this means that a one-unit increase in religious affiliation is associated with an increase of 0.0363076 units in the perceived seriousness of climate change.
+
+For regression 2: 
+
+The coefficient for RELPER_W106 now represents the estimated change in CLMSRS1_W106 associated with a one-unit change in religious affiliation, holding political party affiliation constant. Given that the coefficient for RELPER remained relatively constant at 0.03286 and the coefficient for F_PARTY_FINAL is 0.02923, this implies that the relationship between religiosity and views on climate change established in the first regression remains stable even when considering political party affiliation.
+
+
+## Conclusion 
+
+The results of my plot/regression do not support my hypothesis. Both regression models indicate positive, although very slight, associations between religious affiliation and the perceived seriousness of climate change. These findings suggest that, on average, Americans who identify as religious are more likely to view global climate change as a serious problem, contrary to my hypothesis.
+
+
+
 
